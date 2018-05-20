@@ -32,9 +32,10 @@ if __name__ == '__main__':
     parser.add_argument('-i', '--input_sequence', help='Please enter input sequence file', type=str)
     parser.add_argument('-o', '--output_sequence', help='Please enter output sequence file', type=str)
     args = parser.parse_args()
-    i, o = "C:\\Downloads\\classwork2.fasta", "C:\\Downloads\\classwork_out.fasta"
+    i, o = args.input_sequence, args.output_sequence
     
     record_dict = defaultdict(list)
+    
     info_dict = defaultdict(list)
     
     with open(i, "r") as handle:
